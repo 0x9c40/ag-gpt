@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../store";
 import { toggleDashboard } from "../store/slices/layout";
 
 import Layouted from "./Layouted";

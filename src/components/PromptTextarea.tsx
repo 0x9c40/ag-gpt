@@ -5,7 +5,7 @@ import Layouted from "./Layouted";
 import { sendMessage } from "../services/api/chats";
 import { Message } from "../types";
 import { useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../store";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export default function PromptTextarea() {

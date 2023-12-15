@@ -6,7 +6,7 @@ import { getListOfChats } from "../services/api/chats.ts";
 
 import Account from "./Account.tsx";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../store";
 
 function Sidebar() {
   const isSidebarOpened = useSelector(
