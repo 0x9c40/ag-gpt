@@ -1,0 +1,19 @@
+[
+  {
+    "prompt": "Give me a snapshot of this week's DAU. How does it compare to last week?",
+    "index": 0
+  },
+  {
+    "prompt": "How engaged are our users based on Average Session Duration compared with last week?",
+    "index": 1
+  },
+  {
+    "prompt": "Provide an overview of this week's IAP Revenue performance in comparison to the previous week.",
+    "index": 2
+  },
+  { "prompt": "Explain the effect of media source on DAU.", "index": 3 },
+  {
+    "prompt": "Are there any other metrics that have significant changes this week?",
+    "index": 4
+  }
+]

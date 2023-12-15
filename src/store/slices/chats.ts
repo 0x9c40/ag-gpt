@@ -6,7 +6,7 @@ export interface ChatsState {
 }
 
 const initialState: ChatsState = {
-  activeId: null,
+  activeId: "0",
 };
 
 export const chatsSlice = createSlice({

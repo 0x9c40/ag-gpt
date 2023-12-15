@@ -33,18 +33,3 @@
 //     </div>
 //   );
 // }
-
-{
-  /* <Markdown
-                    remarkPlugins={[remarkGfm]}
-                    rehypePlugins={[rehypeRaw]}
-                    components={{
-                      mycomponent(props) {
-                        const { node, ...rest } = props;
-                        return <MyComponent {...rest} />;
-                      },
-                    }}
-                  >
-                    {table}
-                  </Markdown> */
-}
