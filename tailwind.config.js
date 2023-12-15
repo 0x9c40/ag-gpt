@@ -1,5 +1,4 @@
 import containerQueriesPlugin from "@tailwindcss/container-queries";
-import bgPatternsPlugin from "tailwindcss-bg-patterns";
 import typographyPlugin from "@tailwindcss/typography";
 import headlessUiPlugin from "@headlessui/tailwindcss";
 
@@ -16,7 +15,6 @@ export default {
   },
   plugins: [
     containerQueriesPlugin,
-    bgPatternsPlugin,
     typographyPlugin,
     headlessUiPlugin({ prefix: "ui" }),
   ],
