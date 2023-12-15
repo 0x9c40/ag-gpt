@@ -1,3 +1,4 @@
+import appLogo from "../assets/logo.png";
 import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import { setActiveChatId } from "../store/slices/chats";
 import { useQuery } from "@tanstack/react-query";
@@ -36,13 +37,7 @@ function Sidebar() {
         data-state={isSidebarOpened ? "opened" : "hidden"}
       >
         <div className="mb-2 mr-2 flex h-12 select-none items-center rounded-lg px-2 hover:bg-gray-100">
-          <img
-            src="./logo.png"
-            alt=""
-            height={30}
-            width={30}
-            className="mr-2"
-          />
+          <img src={appLogo} alt="" height={30} width={30} className="mr-2" />
           <span className="text-lg font-semibold">AllmaGen</span>
         </div>
 
