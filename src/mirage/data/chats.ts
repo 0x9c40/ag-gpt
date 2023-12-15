@@ -1,4 +1,4 @@
-import { Chats } from "../../types";
+import type { Chats } from "../../types";
 
 import mdMocks from "../data/markdown-mocks.json";
 

@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
+import { useSelector } from "react-redux";
+import classNames from "classnames";
+
+import type { RootState } from "../store";
 
 interface LayoutedProps {
   children: ReactNode;
   className?: string;
   reverse?: boolean;
 }
-
-import type { RootState } from "../store";
-import { useSelector } from "react-redux";
-import classNames from "classnames";
 
 export default function Layouted({
   children,

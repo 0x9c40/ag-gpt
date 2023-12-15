@@ -1,20 +1,21 @@
+import { sample } from "lodash-es";
+import { nanoid } from "nanoid";
 import { createServer, Response } from "miragejs";
-
 import Fuse from "fuse.js";
+
+import { Chat, Message } from "../types";
+
 import promptsList from "./data/prompts.json";
+import mdMocks from "./data/markdown-mocks.json";
+// import tableMocks from "./data/table-mocks.json";
+
+import { chats } from "./data/chats.ts";
+
 const fuseOptions = {
   keys: ["prompt"],
 };
+
 const fuse = new Fuse(promptsList, fuseOptions);
-
-import mdMocks from "./data/markdown-mocks.json";
-import tableMocks from "./data/table-mocks.json";
-
-import { chats } from "./data/chats";
-
-import { Chats, Chat, Message } from "../types";
-import { nanoid } from "nanoid";
-import { sample } from "lodash-es";
 
 createServer({
   routes() {
@@ -33,7 +34,7 @@ createServer({
       return result;
     });
 
-    this.post("/api/chats", (schema, request) => {
+    this.post("/api/chats", () => {
       console.log("TODO: create new chat");
       return new Response(404);
     });
@@ -44,13 +45,13 @@ createServer({
       return chats[id];
     });
 
-    this.post("/api/messages", (schema, request) => {
+    this.post("/api/messages", (_schema, request) => {
       return request.requestBody;
     });
 
     this.post(
       "/api/chats/:chatId/conversation",
-      (schema, request): Message[] => {
+      (_schema, request): Message[] => {
         const { chatId } = request.params;
         const clientMessage = JSON.parse(request.requestBody);
 
@@ -80,6 +81,3 @@ createServer({
     );
   },
 });
-
-// console.log("SCHEMA", schema);
-// console.log("REQUEST", request);

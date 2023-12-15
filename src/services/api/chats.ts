@@ -1,6 +1,6 @@
-import { Message } from "../../types";
+import type { Chat, Message } from "../../types";
 
-export async function getChat(id: string) {
+export async function getChat(id: string): Promise<Chat> {
   console.log(`GET /api/chats/${id}`);
 
   const response = await fetch(`/api/chats/${id}`, {
@@ -10,7 +10,7 @@ export async function getChat(id: string) {
   return await response.json();
 }
 
-export async function getListOfChats() {
+export async function getListOfChats(): Promise<Chat[]> {
   console.log("GET /api/chats");
 
   const response = await fetch(`/api/chats`, {

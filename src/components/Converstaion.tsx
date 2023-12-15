@@ -1,18 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
-import type { RootState } from "../store/index.ts";
+import { useQuery } from "@tanstack/react-query";
+
+import type { RootState } from "../store";
 
 import { getChat } from "../services/api/chats.ts";
 
-import Layouted from "./Layouted.tsx";
-import PromptTextarea from "./PromptTextarea.tsx";
-
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 import AppMessage from "./Message.tsx";
-
-import { Message } from "../types/index.ts";
+import PromptTextarea from "./PromptTextarea.tsx";
 
 export default function Conversation() {
   const actvieChatId = useSelector((state: RootState) => state.chats.activeId);
@@ -29,8 +23,8 @@ export default function Conversation() {
         className="relative flex-1 overflow-auto pt-6"
         id="messages-container"
       >
-        {chatData?.conversation.map((message: Message) => (
-          <AppMessage message={message} key={message.id} />
+        {chatData?.conversation.map((message) => (
+          <AppMessage key={message.id} message={message} />
         ))}
       </div>
 

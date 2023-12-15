@@ -1,13 +1,15 @@
 import { useDispatch } from "react-redux";
-import Layouted from "./Layouted";
+
 import { hideDashboard } from "../store/slices/layout";
+
+import Layouted from "./Layouted";
 
 export default function Dashboard() {
   const dispatch = useDispatch();
 
   return (
     <Layouted
-      className={"pointer-events-none absolute bottom-0 left-0 right-0 top-0"}
+      className="pointer-events-none absolute bottom-0 left-0 right-0 top-0"
       reverse={true}
     >
       <div
@@ -15,34 +17,10 @@ export default function Dashboard() {
         onClick={() => dispatch(hideDashboard())}
       >
         <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-          expedita reiciendis ducimus culpa consequatur iusto reprehenderit quo
-          nemo delectus ipsum aperiam cupiditate possimus, libero distinctio
-          sit. Ipsum ex mollitia facilis. Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Harum expedita reiciendis ducimus culpa
-          consequatur iusto reprehenderit quo nemo delectus ipsum aperiam
-          cupiditate possimus, libero distinctio sit. Ipsum ex mollitia facilis.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-          expedita reiciendis ducimus culpa consequatur iusto reprehenderit quo
-          nemo delectus ipsum aperiam cupiditate possimus, libero distinctio
-          sit. Ipsum ex mollitia facilis. Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Harum expedita reiciendis ducimus culpa
-          consequatur iusto reprehenderit quo nemo delectus ipsum aperiam
-          cupiditate possimus, libero distinctio sit. Ipsum ex mollitia facilis.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-          expedita reiciendis ducimus culpa consequatur iusto reprehenderit quo
-          nemo delectus ipsum aperiam cupiditate possimus, libero distinctio
-          sit. Ipsum ex mollitia facilis. Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Harum expedita reiciendis ducimus culpa
-          consequatur iusto reprehenderit quo nemo delectus ipsum aperiam
-          cupiditate possimus, libero distinctio sit. Ipsum ex mollitia facilis.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
-          expedita reiciendis ducimus culpa consequatur iusto reprehenderit quo
-          nemo delectus ipsum aperiam cupiditate possimus, libero distinctio
-          sit. Ipsum ex mollitia facilis. Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Harum expedita reiciendis ducimus culpa
-          consequatur iusto reprehenderit quo nemo delectus ipsum aperiam
-          cupiditate possimus, libero distinctio sit. Ipsum ex mollitia facilis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          recusandae facilis, ut rem quis eligendi. Consectetur doloremque harum
+          assumenda, dolorum labore error sint minima? Placeat aliquam
+          reprehenderit natus nostrum incidunt!
         </div>
       </div>
     </Layouted>
